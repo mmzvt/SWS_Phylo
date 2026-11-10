@@ -1,0 +1,18 @@
+# Software for the Binder session.
+# Binder (repo2docker) reads this file and builds the environment automatically.
+# The same file works on a laptop:  conda env create -f binder/environment.yml
+name: phylo-teaching
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.11
+  - jupyterlab
+  - hmmer=3.4        # hmmsearch, hmmfetch
+  - mafft=7.526      # multiple sequence alignment
+  - trimal=1.5.1     # alignment trimming
+  - seqkit=2.14.0    # FASTA handling (stats, grep, renaming)
+  - fasttree=2.2.0   # backup: quick tree inside Binder if the web server is down
+  - biopython        # reading alignments and drawing trees in Python
+  - pandas           # showing hmmsearch results as a table
+  - matplotlib       # plots
